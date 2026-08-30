@@ -1,0 +1,197 @@
+:root {
+  --bg: #fbf9f5;
+  --ink: #2e2a24;
+  --ink-strong: #26221c;
+  --ink-soft: #4a443a;
+  --ink-faint: #a39a87;
+  --accent: #8a9779;
+  --rule: #cfc8b8;
+  --pill-border: #ddd5c4;
+  --pill-text: #5c5546;
+  --github: #24292f;
+  --linkedin: #0a66c2;
+  --serif: Georgia, 'Times New Roman', serif;
+  --sans: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { color-scheme: light; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--serif);
+  -webkit-font-smoothing: antialiased;
+}
+
+.topbar {
+  padding: 1.25rem 1.5rem;
+  font-family: var(--sans);
+  font-size: 0.85rem;
+}
+
+.topbar nav {
+  max-width: 620px;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--ink-faint);
+}
+
+.topbar a {
+  color: var(--ink-soft);
+  text-decoration: none;
+}
+
+.topbar a:hover,
+.topbar a:focus-visible {
+  color: var(--accent);
+}
+
+.topbar .sep {
+  margin: 0 0.6em;
+  color: var(--pill-border);
+}
+
+main {
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem 5rem;
+  text-align: center;
+  animation: rise 0.6s ease-out both;
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  main { animation: none; }
+}
+
+.eyebrow {
+  letter-spacing: 0.38em;
+  font-size: 0.72rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin: 0 0 16px;
+  font-family: var(--sans);
+}
+
+h1 {
+  font-size: clamp(2.1rem, 5vw, 2.7rem);
+  line-height: 1.12;
+  font-weight: 400;
+  margin: 0 0 12px;
+  color: var(--ink-strong);
+}
+
+.subtitle {
+  font-style: italic;
+  color: var(--ink-faint);
+  font-size: clamp(0.92rem, 2.4vw, 1.02rem);
+  margin: 0 0 34px;
+}
+
+.rule {
+  width: 54px;
+  height: 2px;
+  background: var(--rule);
+  margin: 0 auto 34px;
+}
+
+.lede p {
+  font-size: clamp(1.2rem, 3.6vw, 1.42rem);
+  line-height: 1.55;
+  margin: 0 0 24px;
+  color: #33291f;
+}
+
+.bio p {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  margin: 0 0 20px;
+  color: var(--ink-soft);
+  text-align: left;
+}
+
+.skills {
+  margin: 10px 0 30px;
+}
+
+.pill {
+  display: inline-block;
+  border: 1px solid var(--pill-border);
+  border-radius: 999px;
+  padding: 6px 14px;
+  margin: 0 5px 10px;
+  font-size: 0.82rem;
+  color: var(--pill-text);
+  background: #ffffff;
+  font-family: var(--sans);
+}
+
+.links {
+  margin: 6px 0 28px;
+}
+
+.button {
+  display: inline-block;
+  color: #ffffff !important;
+  text-decoration: none;
+  border-radius: 999px;
+  padding: 13px 34px;
+  margin: 0 7px 12px;
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.button:hover,
+.button:focus-visible {
+  transform: translateY(-1px);
+}
+
+.button--github {
+  background: var(--github);
+  box-shadow: 0 2px 6px rgba(36, 41, 47, 0.18);
+}
+
+.button--linkedin {
+  background: var(--linkedin);
+  box-shadow: 0 2px 6px rgba(10, 102, 194, 0.22);
+}
+
+.linkedin-badge {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 40px;
+  min-height: 65px;
+}
+
+.offclock {
+  margin-top: 32px;
+}
+
+.quote {
+  font-style: italic;
+  font-size: 1.08rem;
+  line-height: 1.85;
+  color: #5f584b;
+  margin: 0 0 46px;
+}
+
+footer p {
+  font-size: 0.85rem;
+  color: var(--ink-faint);
+  margin: 0;
+  font-family: var(--sans);
+}
+
+@media (max-width: 480px) {
+  main { padding: 1rem 1.25rem 4rem; }
+  .bio p { text-align: left; }
+}
