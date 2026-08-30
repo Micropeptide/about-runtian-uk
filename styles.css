@@ -196,13 +196,6 @@ h1 {
   box-shadow: 0 2px 6px rgba(10, 102, 194, 0.22);
 }
 
-.linkedin-badge {
-  display: flex;
-  justify-content: center;
-  margin: 0 0 40px;
-  min-height: 65px;
-}
-
 .offclock {
   margin-top: 32px;
 }
